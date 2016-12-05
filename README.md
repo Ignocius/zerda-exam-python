@@ -35,3 +35,4 @@ Now we can draw our rectangle! If we want to draw more, with different positions
 
 ### What does V stand for in MVC? [2p]
 #### Your answer:
+MVC is a "modern" (introduces in 1976) pattern design, it separates our program for a Model a View and a Control structure. What does V stand for? It's the VIEW, we put evrything in here wich responsible of the displayment of information. For example if we want to make a game and we need a tilemap, we can use a matrix datastructure wich will be inside the modell, and evrytime we want to draw our map, we will call it from control, and give this data through control to the view.
