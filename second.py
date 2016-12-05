@@ -12,7 +12,7 @@ def file_writer_ten_times_in_one_run(file_name, string_input):
             f.write(string_input)
         return True
     except IOError:
-        print(False)
+        return False
 
-file_writer_ten_times_in_one_run("tree.txt", "apple")
-file_writer_ten_times_in_one_run("", "apple")
+print(file_writer_ten_times_in_one_run("tree.txt", "apple"))
+print(file_writer_ten_times_in_one_run("", "apple"))
