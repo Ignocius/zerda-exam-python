@@ -27,8 +27,11 @@ The application is accepted if:
 ### Explain the algorithm seen in `third.py`. Use a flowchart, structogram or pseudo code. [2p]
 #### Your answer:
 
+
 ### How can you create a graphical user interface and draw a rectangle on it in python? What are the tools needed for it? [2p]
 #### Your answer:
+First of all we have to import the Tkinter module, it is the standard GUI (graphical user interface) library for python /from tkinter import */. After that we can start using it, within a function, or within OO structure. How does it works? First of all we've to set our root(root = Tk() ). After that we have to set our Canvas, for easier use later we should give it to a variable (canvas = canvas = Canvas(root, width="300", height="300"), now we can set the width and height of our canvas, after that in the next line canvas.pack() our canvas builder. 
+Now we can draw our rectangle! If we want to draw more, with different positions, than we should use another variable for this, box = canvas.create_rectangle(50,50, param, param2). So as you can see we called our canvas var which is the Canvas, and inside there are lot of built in drawing methods. After we set our rectangle, we call root.mainloop(), we always end our drawing-part by calling the mainloop method of the root window.
 
 ### What does V stand for in MVC? [2p]
 #### Your answer:
