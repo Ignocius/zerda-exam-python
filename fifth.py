@@ -25,6 +25,31 @@
 
 from fourth import Rocket
 
+class SpaceX:
+    def __init__(self, stored_fuel):
+        self.stored_fuel = stored_fuel
+        self.rocket_storage = []
+
+    def addRocket(self, rocket):
+        self.rocket_storage.append(rocket)
+
+    def refill_all(self):
+        for rocket in self.rocket_storage:
+            self.stored_fuel -= rocket.refill()
+
+    def launch_all(self):
+        for rocket in self.rocket_storage:
+            rocket.launch()
+
+    def buy_fuel(self, amount):
+        self.stored_fuel += amount
+
+    def getStats(self):
+        launches = 0
+        for rocket in self.rocket_storage:
+            launches += rocket.launches_num
+        return("rockets: {0}, fuel: {1}, Launches: {2}".format(str(len(self.rocket_storage)), str(self.stored_fuel), str(launches)))
+
 # class implementation goes here
 
 space_x = SpaceX(100)
