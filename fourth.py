@@ -22,6 +22,35 @@
 
 # The following code should work with the class:
 
+class Rocket:
+    def __init__(self, rocket_type, starting_fuel=0, launches_num=0):
+        self.rocket_type = rocket_type
+        self.starting_fuel = starting_fuel
+        self.launches_num = launches_num
+
+    def launch(self):
+        if self.starting_fuel > 0:
+            self.launches_num += 1
+            if self.rocket_type == 'falcon1':
+                self.starting_fuel -= 1
+            else:
+                self.starting_fuel -= 9
+
+    def refill(self):
+        used_Fuel = 0
+        if self.rocket_type == 'falcon1':
+            while self.starting_fuel < 5:
+                self.starting_fuel += 1
+                used_Fuel += 1
+        else:
+            while self.starting_fuel < 20:
+                self.starting_fuel += 1
+                used_Fuel += 1
+        return used_Fuel
+
+    def getStats(self):
+        return("name: {0}, fuel: {1}, launches: {2}".format(self.rocket_type, str(self.starting_fuel), str(self.launches_num)))
+
 falcon1 = Rocket('falcon1')
 returned_falcon9 = Rocket('falcon9', 11, 1)
 

@@ -14,7 +14,5 @@ class UnittestForThirdTask(unittest.TestCase):
     def test_if_we_use_number_input(self):
         self.assertEqual(count_letter_in_string(123, 2), 0)
 
-
-
 if __name__ == '__main__':
     unittest.main()
