@@ -26,7 +26,8 @@ The application is accepted if:
 
 ### Explain the algorithm seen in `third.py`. Use a flowchart, structogram or pseudo code. [2p]
 #### Your answer:
-
+Flowchart added.
+Maybe there is a missunderstandable phrase in it, in the end I wrote "end of letters", I meant that the for loop iterated through our word. So now we can return our word counter!
 
 ### How can you create a graphical user interface and draw a rectangle on it in python? What are the tools needed for it? [2p]
 #### Your answer:
